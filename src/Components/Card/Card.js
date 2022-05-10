@@ -9,6 +9,7 @@ function Card() {
             <div className='card_top'>
                 <div className='card_labels'>
                     <Chip text="Front-end" color='green'/>
+                    
 
                 </div>
                 <MoreHorizontal/>
