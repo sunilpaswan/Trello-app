@@ -19,6 +19,8 @@ function App() {
           <Board/>
           <Board/>
           
+          
+          
         </div>
       </div>
     </div>

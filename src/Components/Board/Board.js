@@ -2,6 +2,7 @@ import React from 'react'
 import { MoreHorizontal } from 'react-feather'
 import Card from '../Card/Card'
 import './Board.css'
+import Editable from '../Editable/Editable'
 
 function Board() {
     return (
@@ -12,6 +13,15 @@ function Board() {
         </div>
         <div className='board_cards'>
             <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Editable/>
         </div>
         </div>
     )

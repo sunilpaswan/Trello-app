@@ -1,0 +1,31 @@
+import React from 'react'
+import { X } from 'react-feather'
+import './Editable.css'
+
+function Editable(props) {
+    const [showEdit,setShowEdit]=useState(false)
+    return (
+        <div className='editable'>
+            {
+                showEdit
+            }
+            <form className='editable_edit' 
+            onSubmit={(event)=>{
+                event.preventDefault()
+                if(props.onSubmit)props.onSubmit()
+            }}
+            >
+                <input type="text"
+                defaultValue={props.text} 
+                placeholder={props.placeholder}/>
+                <div className='editable_edit_footer'>
+                    <button type='submit'>{props.buttonText || "Add"}</button>
+                    <X onclose/>
+                </div>
+            </form>
+            :<p>{props.text ||'Add Card'}</p>
+        </div>
+    )
+}
+
+export default Editable

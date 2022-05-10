@@ -16,3 +16,33 @@
     display: flex;
     gap: 10px;
 }
+
+.card_top svg{
+    opacity: 0;
+    transition: 200ms;
+}
+
+.card:hover .card_top svg{
+    opacity: 1;
+}
+
+.card_title{
+    font-weight: bold;
+}
+
+.card_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card_footer svg{
+    height: 14px;
+    width: 14px;
+}
+
+.card_footer p{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
