@@ -8,9 +8,9 @@ function Editable(props) {
     return (
         <div className='editable'>
             {
-                showEdit
-            }
-            <form className='editable_edit' 
+                showEdit ?
+            
+            <form className={`editable_edit ${props.editclass || " " }`}
             onSubmit={(event)=>{
                 event.preventDefault()
                 if(props.onSubmit)props.onSubmit()
@@ -24,7 +24,10 @@ function Editable(props) {
                     <X onClick={() => setShowEdit(false)}/>
                 </div>
             </form>
-            :<p onClick={() => setShowEdit}>{props.text ||'Add item'}</p>
+            :(
+            <p className= {`editable_display ${props.displayclass || "  "}`}
+             onClick={() => setShowEdit(true)}>{props.text ||'Add item'}</p>
+            )}
         </div>
     )
 }
