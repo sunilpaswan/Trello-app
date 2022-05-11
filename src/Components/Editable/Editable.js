@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { X } from 'react-feather'
 import './Editable.css'
+
 
 function Editable(props) {
     const [showEdit,setShowEdit]=useState(false)
@@ -20,10 +21,10 @@ function Editable(props) {
                 placeholder={props.placeholder}/>
                 <div className='editable_edit_footer'>
                     <button type='submit'>{props.buttonText || "Add"}</button>
-                    <X onclose/>
+                    <X onClick={() => setShowEdit(false)}/>
                 </div>
             </form>
-            :<p>{props.text ||'Add Card'}</p>
+            :<p onClick={() => setShowEdit}>{props.text ||'Add item'}</p>
         </div>
     )
 }

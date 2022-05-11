@@ -14,13 +14,8 @@ function Board() {
         <div className='board_cards'>
             <Card/>
             <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            
+            
             <Editable/>
         </div>
         </div>
