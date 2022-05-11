@@ -16,9 +16,11 @@ function Editable(props) {
                 if(props.onSubmit)props.onSubmit()
             }}
             >
-                <input type="text"
+                <input 
+                autoFocus
+                type="text"
                 defaultValue={props.text} 
-                placeholder={props.placeholder}/>
+                placeholder={props.placeholder || "Enter item"}/>
                 <div className='editable_edit_footer'>
                     <button type='submit'>{props.buttonText || "Add"}</button>
                     <X onClick={() => setShowEdit(false)}/>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Board from './Components/Board/Board'
+import Editable from './Components/Editable/Editable'
 
 
 
@@ -16,8 +17,12 @@ function App() {
         <div className='app_boards'>
           <Board/>
           <Board/>
-          <Board/>
-          <Board/>
+          <div className='app_boards_board'>
+          <Editable 
+          displayclass="app_boards_board_add"
+          text="Add Board"
+          placeholder="Enter Board Title"/>
+          </div>
           
           
           
