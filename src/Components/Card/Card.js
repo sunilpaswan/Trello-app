@@ -4,12 +4,17 @@ import Chip from '../Chip/Chip'
 import './Card.css'
 import Dropdown from '../Dropdown/Dropdown'
 
-function Card() {
+function Card(props) {
     const [showDropdown, setShowDropdown] = useState(false)
     return (
         <div className=' card'>
             <div className='card_top'>
                 <div className='card_top_labels'>
+                    {
+                        props.card?.labels?.map((item, index)=><Chip 
+                        text={item.text}
+                        color={item.color}/>)
+                    }
                     <Chip text="Front-end" color='green'/>
                     
 
