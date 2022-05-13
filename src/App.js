@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './App.css'
-import Board from './Components/Board/Board'
-import Editable from './Components/Editable/Editable'
+import React, { useEffect, useState } from "react";
 
+import Board from "./Components/Board/Board";
 
-
+import "./App.css";
+import Editable from "./Components/Editabled/Editable";
 
 function App() {
   const [boards, setBoards] = useState(
@@ -124,7 +123,7 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1>Trello</h1>
+        <h1>Kanban Board</h1>
       </div>
       <div className="app_boards_container">
         <div className="app_boards">
@@ -156,4 +155,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
