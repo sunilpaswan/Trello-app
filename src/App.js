@@ -5,6 +5,7 @@ import Board from "./Components/Board/Board";
 import "./App.css";
 import Editable from "./Components/Editabled/Editable";
 
+
 function App() {
   const [boards, setBoards] = useState(
     JSON.parse(localStorage.getItem("prac-kanban")) || []
@@ -123,7 +124,8 @@ function App() {
   return (
     <div className="app">
       <div className="app_nav">
-        <h1>Kanban Board</h1>
+        
+        <h1>Trello</h1>
       </div>
       <div className="app_boards_container">
         <div className="app_boards">
